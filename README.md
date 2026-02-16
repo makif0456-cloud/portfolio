@@ -33,7 +33,6 @@ portfolio/
     git clone https://github.com/yourusername/portfolio.git
     cd portfolio
     ```
-
 2.  **Install dependencies**:
     ```bash
     npm install

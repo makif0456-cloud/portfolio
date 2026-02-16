@@ -21,17 +21,17 @@ export const portfolioData = {
             degree: "B.Tech in Information Technology",
             institute: "Harcourt Butler Technical University (HBTU), Kanpur",
             status: "Currently pursuing",
-            year: "2021 - 2025", // Assumption based on "Student", can be updated
+            year: "2024 - 2028", // Assumption based on "Student", can be updated
             focus: ["Data Structures & Algorithms", "Object-Oriented Programming", "Databases", "Operating Systems"],
         },
     ],
     experience: [
         {
-            role: "Software Engineering Intern",
-            company: "Tech Solutions (Placeholder)",
-            duration: "May 2024 - July 2024",
-            description: "Built scalable APIs and optimized database queries.",
-            technologies: ["Node.js", "Express", "MongoDB"],
+            role: "Associate Head",
+            company: "NSS HBTU",
+            duration: "Jan 2026 - Present",
+            description: "Contribute in Public Relations domain.",
+            technologies: ["Strategic Communication", "Event Management", "Team Leadership"],
         },
     ],
     skills: {
@@ -78,9 +78,9 @@ export const portfolioData = {
         },
     ],
     contact: {
-        email: "email@example.com",
-        github: "https://github.com/yourusername",
-        linkedin: "https://linkedin.com/in/yourusername",
+        email: "makif2725@gmail.com",
+        github: "https://github.com/makif0456-cloud",
+        linkedin: "https://www.linkedin.com/in/mohd-akif-525aa5219/",
     },
     footer: {
         text: "Built with Next.js & Tailwind CSS",

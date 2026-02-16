@@ -20,7 +20,7 @@ export function Hero() {
                 className="relative z-10 max-w-4xl mx-auto space-y-6"
             >
                 <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                    <span className="block text-indigo-600 dark:text-indigo-400">Hi, I'm [Your Name]</span>
+                    <span className="block text-indigo-600 dark:text-indigo-400">Hi, I'm Mohd Akif</span>
                     <span className="block mt-2">{title}</span>
                 </h1>
 
