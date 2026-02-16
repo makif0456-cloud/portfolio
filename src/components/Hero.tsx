@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { portfolioData } from "@/data";
 import { cn } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Hero() {
-    const { title, subtitle, cta } = portfolioData.hero;
+    const { title, subtitle, cta, image } = portfolioData.hero;
 
     return (
         <section className="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-white dark:bg-slate-950">
@@ -17,8 +18,19 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="relative z-10 max-w-4xl mx-auto space-y-6"
+                className="relative z-10 max-w-4xl mx-auto space-y-6 flex flex-col items-center"
             >
+                {image && (
+                    <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl mb-6">
+                        <Image
+                            src={image}
+                            alt="Profile"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+                )}
                 <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                     <span className="block text-indigo-600 dark:text-indigo-400">Hi, I'm Mohd Akif</span>
                     <span className="block mt-2">{title}</span>
