@@ -1,6 +1,7 @@
 export const portfolioData = {
     hero: {
         title: "Aspiring Software Development Engineer (SDE)",
+        image: "/profile.jpg",
         subtitle: "B.Tech Information Technology student at HBTU Kanpur, passionate about problem-solving, DSA, and building scalable software",
         cta: {
             resume: "/resume.pdf", // Placeholder
