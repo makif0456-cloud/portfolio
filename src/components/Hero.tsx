@@ -11,7 +11,7 @@ export function Hero() {
     const { title, subtitle, cta, image } = portfolioData.hero;
 
     return (
-        <section className="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-white dark:bg-slate-950">
+        <section className="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-transparent">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20" />
 
             <motion.div
