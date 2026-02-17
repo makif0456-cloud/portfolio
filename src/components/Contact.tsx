@@ -13,12 +13,34 @@ export function Contact() {
         message: "",
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically send the data to a serverless function or EmailJS
-        console.log("Form submitted:", formData);
-        alert("Thanks for reaching out! This is a demo form.");
-        setFormData({ name: "", email: "", message: "" });
+        setStatus("submitting");
+
+        // Use Formspree or similar service
+        // Replace "YOUR_FORMSPREE_ID" with your actual Form ID from https://formspree.io/
+        const FORMSPREE_ID = "xdalzjvy";
+
+        try {
+            const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            setStatus("error");
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -131,11 +153,24 @@ export function Contact() {
 
                     <button
                         type="submit"
-                        className="w-full flex items-center justify-center px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md shadow-lg transition-all hover:scale-[1.02] focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        disabled={status === "submitting"}
+                        className="w-full flex items-center justify-center px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md shadow-lg transition-all hover:scale-[1.02] focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-70 disabled:cursor-not-allowed"
                     >
-                        <Send className="w-4 h-4 mr-2" />
-                        Send Message
+                        {status === "submitting" ? (
+                            "Sending..."
+                        ) : (
+                            <>
+                                <Send className="w-4 h-4 mr-2" />
+                                Send Message
+                            </>
+                        )}
                     </button>
+                    {status === "success" && (
+                        <p className="text-green-600 dark:text-green-400 text-center mt-4 font-medium">Message sent successfully!</p>
+                    )}
+                    {status === "error" && (
+                        <p className="text-red-500 dark:text-red-400 text-center mt-4 font-medium">Failed to send message. Please try again.</p>
+                    )}
                 </form>
             </div>
         </Section>
