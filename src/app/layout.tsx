@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
+import { BackgroundElements } from "@/components/BackgroundElements";
 import { portfolioData } from "@/data";
 
 const geistSans = Geist({
@@ -56,8 +57,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <BackgroundElements />
           <Navbar />
-          <main className="min-h-screen pt-16 bg-white dark:bg-slate-950 transition-colors duration-300">
+          <main className="min-h-screen pt-16 bg-transparent relative z-10">
             {children}
           </main>
           <Footer />
