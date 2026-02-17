@@ -60,7 +60,7 @@ export function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+                className="absolute bottom-3 left-1/2 transform -translate-x-1/2 animate-bounce"
             >
                 <ArrowDown className="h-8 w-8 text-slate-400 dark:text-slate-500" />
             </motion.div>
