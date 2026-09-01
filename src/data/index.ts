@@ -56,28 +56,31 @@ export const portfolioData = {
         },
     ],
     projects: [
-        {
-            title: "Project One (Placeholder)",
-            description: "A full-stack web application built to solve a specific problem. Features include user authentication, real-time data updates, and responsive design.",
-            stack: ["React", "Node.js", "MongoDB", "Tailwind"],
-            github: "https://github.com/yourusername/project-one",
-            demo: "https://project-one-demo.com",
-        },
-        {
-            title: "DSA Visualizer",
-            description: "An interactive visualization tool for common sorting and pathfinding algorithms.",
-            stack: ["JavaScript", "HTML5 Canvas", "CSS"],
-            github: "https://github.com/yourusername/dsa-visualizer",
-            demo: "#",
-        },
-        {
-            title: "Portfolio Website",
-            description: "My personal portfolio website built with Next.js and Tailwind CSS.",
-            stack: ["Next.js", "Tailwind CSS", "TypeScript"],
-            github: "https://github.com/yourusername/portfolio",
-            demo: "#",
-        },
-    ],
+    {
+        title: "CodeForge AI",
+        description:
+            "An AI-powered coding platform designed to help developers practice, learn, and improve their programming skills through intelligent assistance.",
+        stack: ["React", "JavaScript", "AI", "Tailwind CSS"],
+        github: "https://github.com/makif0456-cloud/CodeForge-AI",
+        demo: "https://code-forge-ai-olive.vercel.app/",
+    },
+    {
+        title: "Career Lens AI",
+        description:
+            "An AI-powered career platform that helps users analyze their resumes, identify skill gaps, and receive personalized career guidance.",
+        stack: ["React", "Node.js", "AI", "Tailwind CSS"],
+        github: "https://github.com/makif0456-cloud/career-lens-ai",
+        demo: "https://career-lens-ai-pi.vercel.app/",
+    },
+    {
+        title: "KrishiLink AI",
+        description:
+            "An AI-powered platform designed to strengthen market linkages and price discovery for farmers by connecting farmers with buyers and providing intelligent market insights.",
+        stack: ["React", "Node.js", "Express.js", "PostgreSQL", "AI"],
+        github: "https://github.com/makif0456-cloud/KrishiLink-AI",
+        demo: "",
+    },
+],
     contact: {
         email: "makif2725@gmail.com",
         github: "https://github.com/makif0456-cloud",
