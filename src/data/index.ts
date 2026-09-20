@@ -78,7 +78,7 @@ export const portfolioData = {
             "An AI-powered platform designed to strengthen market linkages and price discovery for farmers by connecting farmers with buyers and providing intelligent market insights.",
         stack: ["React", "Node.js", "Express.js", "PostgreSQL", "AI"],
         github: "https://github.com/makif0456-cloud/KrishiLink-AI",
-        demo: "",
+        demo: "https://krishi-link-ai-gamma.vercel.app/",
     },
 ],
     contact: {
